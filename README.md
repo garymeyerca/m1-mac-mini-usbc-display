@@ -27,6 +27,20 @@ of the Aurora series. The tested desktop kernel identified itself as
 alone does not implement DisplayPort tunneling; the Aurora series supplies
 the experimental kernel support.
 
+## Display compatibility
+
+The patch addresses the **M1 Mac mini's USB4 device-tree handoff**, not the
+ASUS monitor model. Other USB-C monitors that receive DisplayPort video may
+work with this kernel series, but this repository verifies only the PA329CRV
+connected directly to this machine. A different monitor, cable, port,
+resolution, or dock can exercise a different link configuration and needs its
+own test.
+
+"USB display" can also mean a DisplayLink or similar USB graphics adapter.
+Those send video as USB data and need a separate graphics driver; this patch
+does not provide that driver. The alias patch is also specific to T8103-based
+M1 devices and is not a general fix for every computer with USB-C.
+
 ## Reproducing the test
 
 1. Build the Aurora series for the target machine with the alias patch applied.
