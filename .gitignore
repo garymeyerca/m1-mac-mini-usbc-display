@@ -1,0 +1,9 @@
+# Local captures and generated boot artifacts
+*.bin
+*.img
+*.dtb
+*.tar.zst
+vmlinuz-*
+*T*Z.txt
+*.log
+__pycache__/

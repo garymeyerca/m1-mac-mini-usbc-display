@@ -1,0 +1,13 @@
+[Unit]
+Description=Retry Apple USB-C controller initialization after boot
+Wants=systemd-udev-settle.service
+After=systemd-udev-settle.service
+ConditionKernelCommandLine=BOOT_IMAGE=/vmlinuz-aurora-usbcdp
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/aurora-retry-usbc-controller
+TimeoutStartSec=45
+
+[Install]
+WantedBy=multi-user.target

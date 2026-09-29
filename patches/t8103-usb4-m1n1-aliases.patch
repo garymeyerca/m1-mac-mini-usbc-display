@@ -1,0 +1,23 @@
+diff --git i/arch/arm64/boot/dts/apple/t8103-jxxx.dtsi w/arch/arm64/boot/dts/apple/t8103-jxxx.dtsi
+index 81acd8ae4..3dce94154 100644
+--- i/arch/arm64/boot/dts/apple/t8103-jxxx.dtsi
++++ w/arch/arm64/boot/dts/apple/t8103-jxxx.dtsi
+@@ -22,12 +22,18 @@ aliases {
+ 		atcphy0 = &atcphy0;
+ 		atcphy1 = &atcphy1;
+ 		usb4-0-acio = &usb4_0_acio;
++		usb4_0_rc = &usb4_0_acio;
+ 		usb4-0-nhi = &usb4_0_nhi;
++		usb4_0_nhi = &usb4_0_nhi;
+ 		usb4-0-pcie-adapter = &usb4_0_acio;
++		usb4_0_pcie_adapter = &usb4_0_acio;
+ 		usb4-0-pcie = &apciec0;
+ 		usb4-1-acio = &usb4_1_acio;
++		usb4_1_rc = &usb4_1_acio;
+ 		usb4-1-nhi = &usb4_1_nhi;
++		usb4_1_nhi = &usb4_1_nhi;
+ 		usb4-1-pcie-adapter = &usb4_1_acio;
++		usb4_1_pcie_adapter = &usb4_1_acio;
+ 		usb4-1-pcie = &apciec1;
+ 	};
+ 
