@@ -27,6 +27,12 @@ of the Aurora series. The tested desktop kernel identified itself as
 alone does not implement DisplayPort tunneling; the Aurora series supplies
 the experimental kernel support.
 
+The aliases also identify USB4/Thunderbolt controller and PCIe adapter nodes,
+so the handoff is relevant beyond display. The patch does not itself add USB
+data, PCIe tunneling, or dock drivers; those functions depend on the rest of
+the kernel series and the connected hardware. USB data was not verified in
+this Mac mini field test.
+
 ## Display compatibility
 
 The patch addresses the **M1 Mac mini's USB4 device-tree handoff**, not the
